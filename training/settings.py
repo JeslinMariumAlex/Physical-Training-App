@@ -55,7 +55,7 @@ ROOT_URLCONF = 'training.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], # Add this line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

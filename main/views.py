@@ -1,18 +1,21 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 # Create your views here.
 def index(request):
-    return HttpResponse('Home page')
+    return render(request, 'index.html')
 
 def about(request):
-    return HttpResponse('About page')
+    return render(request, 'about.html')
 
 def appointment(request):
-    return HttpResponse('Appointment page')
+    return render(request, 'appointment.html')
 
 def trainers(request):
-    return HttpResponse('trainers page')
+    return render(request, 'trainers.html')
+
+def workouts(request):
+    return render(request, 'workouts.html')
 
 def contact(request):
-    return HttpResponse('contact page')
+    return render(request, 'contact.html')
 
