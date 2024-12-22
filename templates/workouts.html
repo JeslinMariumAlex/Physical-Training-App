@@ -1,7 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 
 {% block title %} Workouts {% endblock %} 
 
 {% block content %}
-    
+
+{% comment %} <h1 class="text-center">Workouts</h1>
+<hr /> {% endcomment %}
+
+{% for w in workouts %}
+<div
+  class="mx-auto w-50 text-center  p-3 my-5 border rounded"
+  style="background-color: #343a40"
+>
+  <h1 class="text-warning">{{w.workout_name}}</h1>
+  <p class="text-white" >{{w.workout_description}}</p>
+</div>
+{% endfor %} 
+
 {% endblock %}
