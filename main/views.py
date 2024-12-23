@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .models import Workout, Trainer
+from .forms import AppointmentForm
+
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -8,7 +11,11 @@ def about(request):
     return render(request, 'about.html')
 
 def appointment(request):
-    return render(request, 'appointment.html')
+    form = AppointmentForm()
+    dict_form = {
+        'form': form
+    }
+    return render(request, 'appointment.html', dict_form)
 
 def trainers(request):
     dict_trainers = {
