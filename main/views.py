@@ -15,6 +15,7 @@ def appointment(request):
         form = AppointmentForm(request.POST)
         if form.is_valid():
             form.save()
+            return render(request, 'confirmation.html')
     form = AppointmentForm()
     dict_form = {
         'form': form
