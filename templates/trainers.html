@@ -4,19 +4,19 @@
 
 {% block content %}
 
-<div class="container text-center my-5 rounded">
+<div class="container text-center my-4 mb-5 rounded">
 
     <h1 class="">Our Trainers</h1>
 
     
     {% for t in trainers %}
 
-        <div class="card text-center mx-3 my-3 " style="width: 18rem;  display:inline-block ;">
+        <div class="card text-center mx-3 my-4 " style="width: 18rem;  display:inline-block ;">
             <img src="{{t.trainer_image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{t.trainer_name}}</h5>
-            <p class="card-text">{{t.trainer_spec}}</p>
-            <h6>{{t.workout_name}} Workout</h6>
+            <h6 class="card-text text-warning">{{t.trainer_spec}}</h6>
+            <!-- <h6>{{t.workout_name}} Workout</h6> -->
             </div>
         </div>
 

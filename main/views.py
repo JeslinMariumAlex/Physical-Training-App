@@ -11,6 +11,10 @@ def about(request):
     return render(request, 'about.html')
 
 def appointment(request):
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
     form = AppointmentForm()
     dict_form = {
         'form': form
