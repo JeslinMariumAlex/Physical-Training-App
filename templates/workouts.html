@@ -4,12 +4,11 @@
 
 {% block content %}
 
-{% comment %} <h1 class="text-center">Workouts</h1>
-<hr /> {% endcomment %}
+<h1 class="text-center p-4">Choose your Workout..</h1>
 
 {% for w in workouts %}
 <div
-  class="mx-auto w-50 text-center  p-3 my-5 border rounded"
+  class="mx-auto w-50 text-center  p-3 mb-5 border rounded"
   style="background-color: #343a40"
 >
   <h1 class="text-warning">{{w.workout_name}}</h1>
