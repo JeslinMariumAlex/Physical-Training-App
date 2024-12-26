@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main',
     'crispy_forms',
     'crispy_bootstrap4',
+    'register',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,6 @@ MEDIA_ROOT = BASE_DIR/ 'uploads'
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
