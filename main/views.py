@@ -20,6 +20,9 @@ def appointment(request):
         if form.is_valid():
             form.save()
             return render(request, 'confirmation.html')
+        else:
+            # If form is not valid, return the form with errors to the user
+            return render(request, 'appointment.html', {'form': form})
     form = AppointmentForm()
     dict_form = {
         'form': form
