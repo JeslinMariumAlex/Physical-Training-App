@@ -58,7 +58,7 @@ ROOT_URLCONF = 'training.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'], # Add this line
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # Add this line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,4 +138,4 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login'
+# LOGOUT_REDIRECT_URL = 'login'

@@ -9,7 +9,7 @@ Login
 {% block content %}
     <div class="container p-5">
         <h2 class="pb-3">Login Here</h2>
-        <form method="post" class="form-group">
+        <form method="POST" class="form-group">
             {% csrf_token %}
             {{form|crispy}}
             <br>
